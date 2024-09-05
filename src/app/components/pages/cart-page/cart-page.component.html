@@ -1,6 +1,11 @@
 <app-title title="Cart Page" margin="1.5rem 0 0 2.5rem"></app-title>
-
-<div class="container">
+ <app-not-found
+ [visible]="!cart || !cart.items.length "
+ notFoundMessage="Cart Page Is Empty"
+ resetLinkText  ="Go to Homepage"
+ ></app-not-found>
+<div *ngif="cart && cart.items.length" class="container">        
+    <!-- checkout buttom is not working due to ng if length and cart  add to cart functionality is not working -->
 <ul>
   <li *ngFor="let cartItem of cart.items">
     <div>

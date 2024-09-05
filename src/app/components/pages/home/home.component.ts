@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent {
   foods:Food[]= [];
+  
   constructor(private foodService:FoodService, activatedRoute:ActivatedRoute)  {
 
 activatedRoute.params.subscribe((params) =>{

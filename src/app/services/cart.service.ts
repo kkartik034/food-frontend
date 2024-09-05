@@ -15,7 +15,7 @@ export class CartService {
   addToCart(food: Food): void {
     let cartItem = this.cart.items
       .find(item => item.food.id === food.id);
-    if (cartItem)
+    if (cartItem)                                       //functionality is not working due to misssing shared/models in constructor
       return;
 
     this.cart.items.push(new CartItem(food));
